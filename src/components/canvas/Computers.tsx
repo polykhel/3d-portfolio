@@ -3,11 +3,11 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useState } from 'react';
 import Loader from '../Loader.tsx';
 
-interface ComputerProps {
+interface IProps {
     isMobile: boolean;
 }
 
-const Computers = ({isMobile}: ComputerProps) => {
+const Computers = ({isMobile}: IProps) => {
     const computer = useGLTF('./desktop_pc/scene.gltf');
 
     return (
