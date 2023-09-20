@@ -1,18 +1,17 @@
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
+import { ServiceModel } from '../models/Service.model.ts';
 import { styles } from '../styles.ts';
-import Tilt from 'react-parallax-tilt';
 
 import { fadeIn, textVariant } from '../utils/motion';
 
-interface IProps {
-  icon: string;
+interface ServiceCardProps extends ServiceModel {
   index: number;
-  title: string;
 }
 
-const ServiceCard = ({ icon, index, title }: IProps) => {
+const ServiceCard = ({ icon, index, title }: ServiceCardProps) => {
   return (
     <Tilt
       scale={1}
