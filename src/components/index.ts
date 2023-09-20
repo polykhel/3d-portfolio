@@ -1,4 +1,9 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas/index.ts';
+import {
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+} from './canvas/index.ts';
 import Hero from './Hero.tsx';
 import Navbar from './Navbar.tsx';
 import About from './About.tsx';
@@ -17,8 +22,8 @@ export {
   Works,
   Feedbacks,
   Contact,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
-  StarsCanvas
-}
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+};
