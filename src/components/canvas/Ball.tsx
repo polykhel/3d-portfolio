@@ -9,21 +9,15 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={1}></ambientLight>
-      <directionalLight position={[0, 0, 0, 0.05]}></directionalLight>
+      <directionalLight position={[0, 0, 0.05]}></directionalLight>
       <mesh castShadow={true} receiveShadow={true} scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          hash='#fff8eb'
           polygonOffset={true}
           polygonOffsetFactor={-5}
           flatShading={true}
         />
-        <Decal
-          position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
-          map={decal}
-          flatShading
-        />
+        <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} map={decal} />
       </mesh>
     </Float>
   );

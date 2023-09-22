@@ -7,7 +7,7 @@ import * as THREE from 'three';
 const Stars = () => {
   const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    random.inSphere(new Float32Array(6000), { radius: 1.2 })
   );
 
   useFrame((_state, delta) => {
@@ -19,6 +19,7 @@ const Stars = () => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
+      {/* @ts-ignore */}
       <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
